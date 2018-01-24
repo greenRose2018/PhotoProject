@@ -95,11 +95,11 @@ public class IntArrayWorkerTester
   public static void main(String[] args)
   {
     testSetMatrix();
-    testFillPattern1();
+    //testFillPattern1();
     //testGetCount(); 
-    testGetTotal();
-    testGetTotalNested();
-    //testGetLargest();
+    //testGetTotal();
+    //testGetTotalNested();
+    testGetLargest();
     //testGetColTotal();
   }
 }
