@@ -63,11 +63,10 @@ public class IntArrayWorker
   
   public int getLargest()
   {
-	  int total = 0;
+	  int largest = 0;
 	  
 	  
-	  
-	  return total;
+	  return largest;
   }
   
   /**
