@@ -52,12 +52,11 @@ public class IntArrayWorker
 	  
 	  for(int rows = 0; rows < matrix.length; rows++)
 	  {
-		  for(int col = 0; col < matrix[0].length; col++)
+		  for(int col = 0; col < 1; col++)
 		  {
-			  
+			  total += matrix[rows][column];
 		  }
 	  }
-	  
 	  
 	  return total;
   }
