@@ -65,6 +65,17 @@ public class IntArrayWorker
   {
 	  int largest = 0;
 	  
+	  for(int [] rowArray : matrix)
+	  {
+		  for(int item : rowArray)
+		  {
+			  if(item > largest)
+			  {
+				  largest = item;
+			  }
+		  }
+		  
+	  }
 	  
 	  return largest;
   }
