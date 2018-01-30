@@ -159,6 +159,36 @@ public class Picture extends SimplePicture
       }
     }
   }
+ 
+  
+  public void gengarFilter(int startRow, int startCol)
+  {
+	  Pixel fromPixel = null;
+	  Pixel toPixel = null;
+	  Picture gengar = new Picture("gengar.png");
+	  Pixel [][] toPixels = this.getPixels2D();
+	  Pixel [][] fromPixels = gengar.getPixels2D();
+	  
+	  int fromRow = 0;
+	  for(int toRow = startRow; toRow < toPixels.length && fromRow < fromPixels.length; toRow++)
+	  {
+		  int fromCol = 0;
+		  for (int toCol = 0; toCol < toPixels[0].length && fromCol < fromPixels[0].length; toCol++)
+		  {
+			  fromPixel = fromPixels[fromRow][fromCol];
+			  toPixel = toPixels[toRow][toCol];
+			  
+			  if(!fromPixel.isTransparent())
+			  {
+				  toPixel.setRed(fromPixel.getRed());
+				  toPixel.setBlue(fromPixel.getBlue());
+				  toPixel.setGreen(fromPixel.getGreen());
+			  }
+			  fromCol++;
+		  }
+		  fromRow++;
+	  }
+  }
   
   /** copy from the passed fromPic to the
     * specified startRow and startCol in the
