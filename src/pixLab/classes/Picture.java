@@ -159,6 +159,29 @@ public class Picture extends SimplePicture
       }
     }
   }
+  
+  public void mirrorAnything()
+  {
+	  int mirrorPoint = 270;
+	    Pixel leftPixel = null;
+	    Pixel rightPixel = null;
+	    int count = 0;
+	    Pixel[][] pixels = this.getPixels2D();
+	    
+	    // loop through the rows
+	    for (int row = 88; row < 160; row++)
+	    {
+	      // loop from 13 to just before the mirror point
+	      for (int col = 13; col < mirrorPoint; col++)
+	      {
+	        
+	        leftPixel = pixels[row][col];      
+	        rightPixel = pixels[row]                       
+	                         [mirrorPoint - col + mirrorPoint];
+	        rightPixel.setColor(leftPixel.getColor());
+	      }
+	    }
+  }
  
   
   public void gengarFilter(int startRow, int startCol)

@@ -52,6 +52,14 @@ public class PictureTester
     temple.explore();
   }
   
+  public static void testMirrorAnything()
+  {
+	  Picture temple = new Picture("temple.jpg");
+	  temple.explore();
+	  temple.mirrorAnything();
+	  temple.explore();
+  }
+  
   /** Method to test the collage method */
   public static void testCollage()
   {
@@ -64,8 +72,12 @@ public class PictureTester
   public static void testEdgeDetection()
   {
     Picture swan = new Picture("swan.jpg");
+    
     swan.edgeDetection(10);
     swan.explore();
+    Picture gengar = new Picture("gengar.png");
+    gengar.edgeDetection(10);
+    gengar.explore();
   }
   
   /** Main method for testing.  Every class can have a main
@@ -76,7 +88,7 @@ public class PictureTester
     // and comment out the ones you don't want
     // to run
     //testZeroBlue();
-	  testGengar();
+	//testGengar();
     //testKeepOnlyBlue();
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
@@ -86,12 +98,13 @@ public class PictureTester
     //testMirrorVertical();
     //testMirrorHorizontal();
     //testMirrorTemple();
+    //testMirrorAnything();
     //testMirrorArms();
     //testMirrorGull();
     //testMirrorDiagonal();
     //testCollage();
     //testCopy();
-    //testEdgeDetection();
+    testEdgeDetection();
     //testEdgeDetection2();
     //testChromakey();
     //testEncodeAndDecode();
