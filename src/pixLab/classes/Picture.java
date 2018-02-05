@@ -183,7 +183,6 @@ public class Picture extends SimplePicture
 	    }
   }
  
-  
   public void gengarFilter(int startRow, int startCol)
   {
 	  Pixel fromPixel = null;
@@ -211,6 +210,28 @@ public class Picture extends SimplePicture
 		  }
 		  fromRow++;
 	  }
+  }
+  
+  public void glitchFilter()
+  {
+	  Pixel leftPixel = null;
+	  Pixel rightPixel = null;
+	  Pixel [][] pixels = this.getPixels2D();
+	  double percentage = .2;
+	  int shift = (int)(percentage * pixels[0].length);
+	  
+	  for(int rows = 0; rows < pixels.length;rows++)
+	  {
+		  for(int cols = 0; cols < pixels[0].length; cols++)
+		  {
+			  int col = 1;
+			  leftPixel = pixels[rows][shift % col];
+			  rightPixel = pixels[rows][cols];
+			  rightPixel.setColor(leftPixel.getColor());
+			  col++;
+		  }
+	  }
+	  
   }
   
   /** copy from the passed fromPic to the
