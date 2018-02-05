@@ -216,19 +216,34 @@ public class Picture extends SimplePicture
   {
 	  Pixel leftPixel = null;
 	  Pixel rightPixel = null;
+	  Pixel midPixel = null;
+	  Pixel endPixel = rightPixel;
 	  Pixel [][] pixels = this.getPixels2D();
 	  double percentage = .2;
 	  int shift = (int)(percentage * pixels[0].length);
+	  int width = pixels[0].length;
+	  
 	  
 	  for(int rows = 0; rows < pixels.length;rows++)
 	  {
 		  for(int cols = 0; cols < pixels[0].length; cols++)
 		  {
-			  int col = 1;
-			  leftPixel = pixels[rows][shift % col];
-			  rightPixel = pixels[rows][cols];
-			  rightPixel.setColor(leftPixel.getColor());
-			  col++;
+			  leftPixel = pixels[rows][cols];
+			  rightPixel = pixels[rows][(width - shift + cols ) % width];
+			  midPixel = pixels[rows][(cols + shift) % width];
+			  //endPixel = pixels[rows][width % (shift)];
+			  
+			  Color leftColor = leftPixel.getColor();
+			  Color rightColor = rightPixel.getColor();
+			  Color midColor = midPixel.getColor();
+			  //Color endColor = endPixel.getColor();
+			  
+			  leftPixel.setColor(rightColor);
+			  rightPixel.setColor(midColor);
+			  midPixel.setColor(leftColor);
+			  //endPixel.setColor(endColor);
+			  
+			  
 		  }
 	  }
 	  
