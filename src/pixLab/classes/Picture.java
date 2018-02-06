@@ -231,17 +231,17 @@ public class Picture extends SimplePicture
 			  leftPixel = pixels[rows][cols];
 			  rightPixel = pixels[rows][(width - shift + cols ) % width];
 			  midPixel = pixels[rows][(cols + shift) % width];
-			  //endPixel = pixels[rows][width % (shift)];
+			  endPixel = pixels[rows][(width - shift + cols - 1) % (width)];
 			  
 			  Color leftColor = leftPixel.getColor();
 			  Color rightColor = rightPixel.getColor();
 			  Color midColor = midPixel.getColor();
-			  //Color endColor = endPixel.getColor();
+			  Color endColor = endPixel.getColor();
 			  
 			  leftPixel.setColor(rightColor);
 			  rightPixel.setColor(midColor);
 			  midPixel.setColor(leftColor);
-			  //endPixel.setColor(endColor);
+			  endPixel.setColor(endColor);
 			  
 			  
 		  }
