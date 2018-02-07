@@ -249,6 +249,28 @@ public class Picture extends SimplePicture
 	  
   }
   
+  public void glitchArt()
+  {
+	  Pixel [][] pixels = this.getPixels2D();
+	  int shiftAmount = (int) (.2 * pixels[0].length);
+	  int width = pixels[0].length;
+	  
+	  for (int row = 0 ; row < pixels.length; row++)
+	  {
+		  Color [] currentColor = new Color[pixels[0].length];
+		  
+		  for(int col = 0; col < pixels[row].length; col++)
+		  {
+			currentColor[col] = pixels[row][col].getColor();  
+		  }
+		  
+		  for (int col = 0; col < pixels[0].length; col++)
+		  {
+			  pixels[row][col].setColor(currentColor[(col + shiftAmount) % width]);
+		  }
+	  }
+  }
+  
   /** copy from the passed fromPic to the
     * specified startRow and startCol in the
     * current picture
