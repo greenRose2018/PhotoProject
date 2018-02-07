@@ -223,7 +223,6 @@ public class Picture extends SimplePicture
 	  int shift = (int)(percentage * pixels[0].length);
 	  int width = pixels[0].length;
 	  
-	  
 	  for(int rows = 0; rows < pixels.length;rows++)
 	  {
 		  for(int cols = 0; cols < pixels[0].length; cols++)
@@ -242,11 +241,8 @@ public class Picture extends SimplePicture
 			  rightPixel.setColor(midColor);
 			  midPixel.setColor(leftColor);
 			  endPixel.setColor(endColor);
-			  
-			  
 		  }
 	  }
-	  
   }
   
   public void glitchArt()
@@ -267,6 +263,35 @@ public class Picture extends SimplePicture
 		  for (int col = 0; col < pixels[0].length; col++)
 		  {
 			  pixels[row][col].setColor(currentColor[(col + shiftAmount) % width]);
+		  }
+	  }
+  }
+  
+  public void colorRedAndBlue()
+  {
+	  Pixel [][] pixels = this.getPixels2D();
+	  Pixel redPixel = null;
+	  Pixel bluePixel = null;
+	  Pixel redPixelSec = null;
+	  Pixel bluePixelSec = null;
+	  int width = pixels[0].length;
+	  int colorRed = 0;
+	  int colorBlue = 0;
+	  for (int row = 50 ; row < 171; row++)
+	  {
+		  for (int col = 50; col < 171; col++)
+		  {
+			  redPixel = pixels[row][col];
+			  bluePixel = pixels[row][col];
+			  
+			  colorRed = redPixel.getRed();
+			  colorBlue = bluePixel.getBlue();
+			  
+			  redPixelSec = pixels[row + 150][col+150];
+			  bluePixelSec = pixels[row + 150][col+150];
+			  
+			  redPixelSec.setRed(colorRed);
+			  bluePixelSec.setBlue(colorBlue);
 		  }
 	  }
   }

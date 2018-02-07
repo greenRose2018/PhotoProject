@@ -34,6 +34,14 @@ public class PictureTester
 	  beach.explore();
   }
   
+  public static void testColorRedAndBlue()
+  {
+	  Picture beach = new Picture("beach.jpg");
+	  beach.explore();
+	  beach.colorRedAndBlue();
+	  beach.explore();
+  }
+  
   /** Method to test mirrorVertical */
   public static void testMirrorVertical()
   {
@@ -97,7 +105,8 @@ public class PictureTester
     // to run
     //testZeroBlue();
 	//testGengar();
-	  testGlitchFilter();
+	//testGlitchFilter();
+	  testColorRedAndBlue();
     //testKeepOnlyBlue();
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
