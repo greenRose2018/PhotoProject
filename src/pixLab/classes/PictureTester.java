@@ -26,6 +26,14 @@ public class PictureTester
 	  beach.explore();
   }
   
+  public static void testMirrorPercentage()
+  {
+	  Picture flower = new Picture("beach.jpg");
+	  flower.explore();
+	  flower.mirrorPercentage();
+	  flower.explore();
+  }
+  
   public static void testGlitchFilter()
   {
 	  Picture beach = new Picture("beach.jpg");
@@ -106,7 +114,8 @@ public class PictureTester
     //testZeroBlue();
 	//testGengar();
 	//testGlitchFilter();
-	  testColorRedAndBlue();
+	//testColorRedAndBlue();
+	  testMirrorPercentage();
     //testKeepOnlyBlue();
     //testKeepOnlyRed();
     //testKeepOnlyGreen();

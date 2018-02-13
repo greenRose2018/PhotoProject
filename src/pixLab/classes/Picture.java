@@ -267,6 +267,30 @@ public class Picture extends SimplePicture
 	  }
   }
   
+  public void mirrorPercentage()
+  {
+	  Pixel [][] pixels = this.getPixels2D();
+	  Pixel topPixel = null;
+	  Pixel bottomPixel = null;
+	  int width = (int) (pixels[0].length * .8) ;
+	  int count = 20;
+	  
+	  for(int row = 0; row < 21; row++)
+	  {
+		  for (int col = 0; col < width + 1; col++ )
+		  {
+			  topPixel = pixels[row][col];
+			  bottomPixel = pixels[row + count][col];
+			  bottomPixel.setColor(topPixel.getColor());
+			  
+		  }
+		  count--;
+	  }
+	  
+	  
+	  
+  }
+  
   public void colorRedAndBlue()
   {
 	  Pixel [][] pixels = this.getPixels2D();
