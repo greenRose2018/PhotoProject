@@ -114,7 +114,7 @@ public class PictureTester
     //testZeroBlue();
 	//testGengar();
 	//testGlitchFilter();
-	//testColorRedAndBlue();
+	  testColorRedAndBlue();
 	  testMirrorPercentage();
     //testKeepOnlyBlue();
     //testKeepOnlyRed();
