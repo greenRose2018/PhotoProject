@@ -297,11 +297,7 @@ public class Picture extends SimplePicture
 	  Pixel bluePixel = null;
 	  Pixel redPixelSec = null;
 	  Pixel bluePixelSec = null;
-	  Pixel thirdRPixel = null;
-	  Pixel thirdBPixel = null;
-	  Pixel fourthRPixel = null;
-	  Pixel fourthBPixel = null;
-	  int width = pixels[0].length;
+	  
 	  int colorRed = 0;
 	  int colorBlue = 0;
 	  for (int row = 50 ; row < 171; row++)
@@ -310,26 +306,47 @@ public class Picture extends SimplePicture
 		  {
 			  redPixel = pixels[row][col];
 			  bluePixel = pixels[row][col];
-			  
 			  colorRed = redPixel.getRed();
 			  colorBlue = bluePixel.getBlue();
 			  
 			  redPixelSec = pixels[row + 150][col+150];
 			  bluePixelSec = pixels[row + 150][col+150];
-			  
-			  thirdRPixel = pixels[row + 250][col+250];
-			  thirdBPixel = pixels[row + 250][col+250];
-			  
+			  redPixelSec.setRed(colorRed);
+			  bluePixelSec.setBlue(colorBlue);
+		  }
+	  }
+  }
+  
+  public void randomColor()
+  {
+	  Pixel [][] pixels = this.getPixels2D();
+	  Pixel thirdRPixel = null;
+	  Pixel thirdBPixel = null;
+	  Pixel fourthRPixel = null;
+	  Pixel fourthBPixel = null;
+	  Pixel secondRPixel = null;
+	  Pixel secondBPixel = null;
+	  
+	  int red = (int) (Math.random() * 256);
+	  int blue = (int) (Math.random() * 256);
+	  int green = (int) (Math.random() * 256);
+	  for(int row = 100; row< 150; row++)
+	  {
+		  for(int col=0; col< 50;col++)
+		  {
+			  secondRPixel = pixels[row][col];
+			  secondBPixel = pixels[row][col];
+			  thirdRPixel = pixels[row + 150][col+150];
+			  thirdBPixel = pixels[row + 150][col+150];
 			  fourthRPixel = pixels[row + 50][col+50];
 			  fourthBPixel = pixels[row + 50][col+50];
 			  
-			  redPixelSec.setRed(colorRed);
-			  bluePixelSec.setBlue(colorBlue);
-			  thirdRPixel.setRed(colorRed);
-			  thirdBPixel.setBlue(colorBlue);
-			  fourthRPixel.setRed(colorRed);
-			  fourthBPixel.setBlue(colorBlue);
-			  
+			  secondRPixel.setBlue(blue);
+			  secondBPixel.setGreen(green);
+			  thirdRPixel.setRed(red);
+			  thirdBPixel.setBlue(blue);
+			  fourthRPixel.setRed(red);
+			  fourthBPixel.setGreen(green);
 		  }
 	  }
   }
