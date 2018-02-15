@@ -359,11 +359,15 @@ public class Picture extends SimplePicture
     // get a graphics context to use to draw on the buffered image
     Graphics2D graphics2d = bufferedImage.createGraphics();
     
+    Color color = name;
     // set the color to white
+    //if()
     graphics2d.setPaint(Color.white);
     
     // set the font to Helvetica bold style and size 16
     graphics2d.setFont(new Font("Helvetica",Font.BOLD,16));
+    
+    // set the color for the font
     
     // draw the message
     graphics2d.drawString(message,xPos,yPos);
