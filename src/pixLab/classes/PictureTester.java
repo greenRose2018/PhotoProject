@@ -47,6 +47,15 @@ public class PictureTester
 	  Picture beach = new Picture("beach.jpg");
 	  beach.explore();
 	  beach.colorRedAndBlue();
+	  beach.randomColor();
+	  beach.glitchArt();
+	  beach.explore();
+  }
+  public static void testRandomColor()
+  {
+	  Picture beach = new Picture("beach.jpg");
+	  beach.explore();
+	  beach.randomColor();
 	  beach.explore();
   }
   
@@ -115,7 +124,8 @@ public class PictureTester
 	//testGengar();
 	//testGlitchFilter();
 	  testColorRedAndBlue();
-	  testMirrorPercentage();
+	//  testMirrorPercentage();
+	//  testRandomColor();
     //testKeepOnlyBlue();
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
