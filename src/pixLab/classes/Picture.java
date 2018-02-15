@@ -70,6 +70,9 @@ public class Picture extends SimplePicture
     super(image);
   }
   
+  ////Data members
+  private BufferedImage bufferedImage;
+  
   ////////////////////// methods ///////////////////////////////////////
   
   /**
