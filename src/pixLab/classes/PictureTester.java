@@ -1,4 +1,7 @@
 package pixLab.classes;
+
+import java.awt.Color;
+
 /**
  * This class contains class (static) methods
  * that will help you test the Picture class 
@@ -28,10 +31,11 @@ public class PictureTester
   
   public static void testMirrorPercentage()
   {
-	  Picture flower = new Picture("beach.jpg");
-	  flower.explore();
-	  flower.mirrorPercentage();
-	  flower.explore();
+	  Picture beach = new Picture("beach.jpg");
+	  beach.explore();
+	  beach.mirrorPercentage();
+	  beach.addMessage("Hello", 10, 10, Color.blue);
+	  beach.explore();
   }
   
   public static void testGlitchFilter()
@@ -124,7 +128,7 @@ public class PictureTester
 	//testGengar();
 	//testGlitchFilter();
 	//testColorRedAndBlue();
-	//testMirrorPercentage();
+	testMirrorPercentage();
 	//testRandomColor();
     //testKeepOnlyBlue();
     //testKeepOnlyRed();
