@@ -367,7 +367,6 @@ public class Picture extends SimplePicture
 	    {
 	    		graphics2d.setPaint(name);
 	    		i+= 13;
-	    		//break;
 	    }
 	    else
 	    {
