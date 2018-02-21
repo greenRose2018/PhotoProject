@@ -34,7 +34,7 @@ public class PictureTester
 	  Picture beach = new Picture("beach.jpg");
 	  beach.explore();
 	  beach.mirrorPercentage();
-	  beach.addMessage("Hello", 10, 10, Color.blue);
+	  beach.addMessage("Hello", 10, 10, Color.GREEN);
 	  beach.explore();
   }
   
