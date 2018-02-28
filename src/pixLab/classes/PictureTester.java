@@ -36,7 +36,7 @@ public class PictureTester
 	  beach.mirrorPercentage();
 	  beach.addMessage("Hello", 50, 50, Color.GREEN);
 	  beach.bobRossFilter(100, 100);
-	  beach.write("BrittneyMoralesClassFilter");
+	  beach.write("BrittneyMoralesClassFilter.jpg");
 	  beach.explore();
   }
   
