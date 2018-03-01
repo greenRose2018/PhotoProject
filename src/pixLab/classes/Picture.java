@@ -234,9 +234,13 @@ public class Picture extends SimplePicture
 			  
 			  if(!fromPixel.isTransparent())
 			  {
-				  toPixel.setRed(fromPixel.getRed());
-				  toPixel.setBlue(fromPixel.getBlue());
-				  toPixel.setGreen(fromPixel.getGreen());
+				  if(toPixel.getGreen() <= 215 && toPixel.getBlue() < 80)
+				  {
+					  toPixel.setRed(fromPixel.getRed());
+					  toPixel.setBlue(fromPixel.getBlue());
+					  toPixel.setGreen(fromPixel.getGreen());
+				  }
+				  
 			  }
 			  fromCol++;
 		  }
