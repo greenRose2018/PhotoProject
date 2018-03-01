@@ -31,7 +31,7 @@ public class PictureTester
   
   public static void testMirrorPercentage()
   {
-	  Picture beach = new Picture("beach.jpg");
+	  Picture beach = new Picture("gorge.jpg");
 	  beach.explore();
 	  beach.mirrorPercentage();
 	  beach.addMessage("Hello", 50, 50, Color.GREEN);
