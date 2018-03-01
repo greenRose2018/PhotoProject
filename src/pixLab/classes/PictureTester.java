@@ -29,15 +29,15 @@ public class PictureTester
 	  beach.explore();
   }
   
-  public static void testMirrorPercentage()
+  public static void testClassFilter()
   {
-	  Picture beach = new Picture("gorge.jpg");
-	  beach.explore();
-	  beach.mirrorPercentage();
-	  beach.addMessage("Hello", 50, 50, Color.GREEN);
-	  beach.bobRossFilter(100, 100);
-	  beach.write("BrittneyMoralesClassFilter.jpg");
-	  beach.explore();
+	  Picture gorge = new Picture("gorge.jpg");
+	  gorge.explore();
+	  gorge.mirrorPercentage();
+	  gorge.addMessage("Hello", 50, 50, Color.GREEN);
+	  gorge.bobRossFilter(100, 100);
+	  gorge.write("BrittneyMoralesClassFilter.jpg");
+	  gorge.explore();
   }
   
   public static void testGlitchFilter()
@@ -130,7 +130,7 @@ public class PictureTester
 	//testGengar();
 	//testGlitchFilter();
 	//testColorRedAndBlue();
-	testMirrorPercentage();
+	testClassFilter();
 	//testRandomColor();
     //testKeepOnlyBlue();
     //testKeepOnlyRed();
